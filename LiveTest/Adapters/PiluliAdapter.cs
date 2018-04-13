@@ -21,7 +21,7 @@ namespace LiveTest.Adapters
 
         public PiluliAdapter()
         {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Take a look at the comment in Programm.cs : line 24
         }
 
         public async Task<SearchResult> Execute(SearchCommand command)
