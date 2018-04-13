@@ -10,11 +10,9 @@ namespace LiveTest
     {
         private static readonly List<(Type type, string zone)> Adapters = new List<(Type, string)>
         {
-            //(typeof(PiluliAdapter), "volGograd"), // Okay if running first
-            (typeof(EaptekaAdapter), "tver"),
-            (typeof(AptekaruAdapter), "30"),
+            // (typeof(PiluliAdapter), "volGograd"), // Okay if running first
             (typeof(ZdravcityAdapter), "samara"),
-            (typeof(PiluliAdapter), "volGograd"), // Encoding issue if running in another order
+            (typeof(PiluliAdapter), "volgograd"), // Encoding issue if running in another order
             (typeof(Ru366Adapter), "78"),
         };
 
@@ -81,13 +79,13 @@ namespace LiveTest
 
             #region Variant without any loop - works fine
 
-            //var service1 = (IAdapter)Activator.CreateInstance(typeof(EaptekaAdapter)); // or simple new EaptekaAdapter() instead
+            //var service1 = (IAdapter)Activator.CreateInstance(typeof(ZdravcityAdapter)); // or simple new ZdravcityAdapter() instead
             //var service2 = (IAdapter)Activator.CreateInstance(typeof(PiluliAdapter)); // or simple new PiluliAdapter(); instead
             //var service3 = (IAdapter)Activator.CreateInstance(typeof(Ru366Adapter)); // or simple new Ru366Adapter(); instead
             //var cmd1 = new SearchCommand
             //{
             //    Query = "но-шпа",
-            //    ZoneId = "tver",
+            //    ZoneId = "samara",
             //};
             //var cmd2 = new SearchCommand
             //{
